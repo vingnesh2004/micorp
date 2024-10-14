@@ -57,5 +57,5 @@ jobs:
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn clean install
-        mvn deploy -DmuleDeploy -Danypoint.username=$ANYPOINT_USERNAME -Danypoint.password=$ANYPOINT_PASSWORD -Dcloudhub.application.name=papi -Dregion=us-east-2 -Denvironment=Sandbox -DconnectedAppClientId=$app_id -DconnectedAppClientSecret=$app_secret -DconnectedAppGrantType=client_credentials 
+        mvn clean deploy -DmuleDeploy -DskipTests -DconnectedAppClientId=f829eb74cfb948da920d734246b44f37 -DconnectedAppClientSecret=1cEd8eb0De0D4F3b840d1e7F0146DE1d -DconnectedAppGrantType=client_credentials -Denvironment=DEV -Dcloudhub.application.name=micorp-processapi -DworkerType=MICRO -Dworkers=1 -Dregion=us-east-1 -Denv=dev -Dkey=1234567890111213
         -X -e
