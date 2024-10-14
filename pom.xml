@@ -34,8 +34,10 @@
                         <uri>https://anypoint.mulesoft.com</uri>
                         <java-version>8</java-version>
                         <muleVersion>4.4.0</muleVersion>
-                        <server>connectedapp</server>
-                        
+			     <connectedAppClientId>${connectedAppClientId}</connectedAppClientId>
+        			<connectedAppClientSecret>${connectedAppClientSecret}</connectedAppClientSecret>
+        				<connectedAppGrantType>${connectedAppGrantType}</connectedAppGrantType>
+        
                         <applicationName>papi</applicationName>
                         <environment>dev</environment>
                         <region>us-east-2</region>
@@ -46,6 +48,7 @@
                         </properties>
                     </cloudHubDeployment>
                 </configuration>
+		
             </plugin>
 		</plugins>
 	</build>
