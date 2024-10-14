@@ -25,27 +25,43 @@
 				<version>3.2.0</version>
 			</plugin>
 			<plugin>
-                <groupId>org.mule.tools.maven</groupId>
-                <artifactId>mule-maven-plugin</artifactId>
-                <version>${mule.maven.plugin.version}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <cloudHubDeployment>
-                        <uri>https://anypoint.mulesoft.com</uri>
-                        <java-version>8</java-version>
-                        <muleVersion>4.4.0</muleVersion>
-                        <applicationName>papi</applicationName>
-                        <environment>Sandbox</environment>
-                        <region>us-east-2</region>
-                        <workers>1</workers>
-                        <workerType>MICRO</workerType>
-                        <properties>
-                            <key>value</key>
-                        </properties>
-                    </cloudHubDeployment>
-                </configuration>
-		
-            </plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>4.3.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${commonDeployment.muleVersion}</muleVersion>
+						<connectedAppClientId>${connectedAppClientId}</connectedAppClientId>
+						<connectedAppClientSecret>${connectedAppClientSecret}</connectedAppClientSecret>
+						<connectedAppGrantType>${connectedAppGrantType}</connectedAppGrantType>
+
+						<applicationName>${cloudhub.application.name}</applicationName>
+						<environment>${environment}</environment>
+						<region>${region}</region>
+						<workers>${workers}</workers>
+						<workerType>${workerType}</workerType>
+						<properties>
+    							<env>${env}</env>
+    							<key>${key}</key>
+    							<anypoint.platform.config.analytics.agent.enabled>${anypoint.platform.config.analytics.agent.enabled}</anypoint.platform.config.analytics.agent.enabled>
+    							<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
+    							<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
+						</properties>
+
+					</cloudHubDeployment>
+				</configuration>
+			</plugin>
+			
+			
 		</plugins>
 	</build>
 
