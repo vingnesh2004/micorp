@@ -34,10 +34,6 @@
                         <uri>https://anypoint.mulesoft.com</uri>
                         <java-version>8</java-version>
                         <muleVersion>4.4.0</muleVersion>
-			     <connectedAppClientId>${connectedAppClientId}</connectedAppClientId>
-        			<connectedAppClientSecret>${connectedAppClientSecret}</connectedAppClientSecret>
-        				<connectedAppGrantType>${connectedAppGrantType}</connectedAppGrantType>
-        
                         <applicationName>papi</applicationName>
                         <environment>Sandbox</environment>
                         <region>us-east-2</region>
