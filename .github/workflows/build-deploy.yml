@@ -57,5 +57,5 @@ jobs:
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn clean install
-        mvn deploy -DmuleDeploy -Danypoint.username=$ANYPOINT_USERNAME -Danypoint.password=$ANYPOINT_PASSWORD -Dcloudhub.application.name=papi -Dregion=us-east-2 -Denvironment=DEV -DconnectedAppClientId=$app_id -DconnectedAppClientSecret=$app_secret -DconnectedAppGrantType=client_credentials 
+        mvn deploy -DmuleDeploy -Danypoint.username=$ANYPOINT_USERNAME -Danypoint.password=$ANYPOINT_PASSWORD -Dcloudhub.application.name=papi -Dregion=us-east-2 -Denvironment=Sandbox -DconnectedAppClientId=$app_id -DconnectedAppClientSecret=$app_secret -DconnectedAppGrantType=client_credentials 
         -X -e
