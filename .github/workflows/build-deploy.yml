@@ -52,8 +52,10 @@ jobs:
       env:
         ANYPOINT_USERNAME: ${{secrets.ANYPOINT_PLATFORM_USERNAME }}   # Corrected variable name
         ANYPOINT_PASSWORD: ${{secrets.ANYPOINT_PLATFORM_PASSWORD }}   # Corrected variable name
+        app_id: ${{secrets.APP_ID }}
+        app_secret: $${{secrets.APP_SECRET }}
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn clean install
-        mvn deploy -DmuleDeploy -Danypoint.username=$ANYPOINT_USERNAME -Danypoint.password=$ANYPOINT_PASSWORD -Dcloudhub.application.name=papi -Dregion=us-east-2 -Denvironment=dev 
+        mvn deploy -DmuleDeploy -Danypoint.username=$ANYPOINT_USERNAME -Danypoint.password=$ANYPOINT_PASSWORD -Dcloudhub.application.name=papi -Dregion=us-east-2 -Denvironment=DEV -DconnectedAppClientId=$app_id -DconnectedAppClientSecret=$app_secret -DconnectedAppGrantType=client_credentials 
         -X -e
