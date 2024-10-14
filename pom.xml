@@ -34,7 +34,7 @@
                         <uri>https://anypoint.mulesoft.com</uri>
                         <java-version>8</java-version>
                         <muleVersion>4.4.0</muleVersion>
-                        
+                        <server>connectedapp</server>
                         
                         <applicationName>papi</applicationName>
                         <environment>dev</environment>
