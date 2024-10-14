@@ -13,10 +13,11 @@
       <username>~~~Client~~~</username>
       <password>f829eb74cfb948da920d734246b44f37~?~1cEd8eb0De0D4F3b840d1e7F0146DE1d</password>
     </server>
-
-   
-    
-
+	<server>
+      	<id>anypoint-platform</id>
+      	<username>vighnesh_new</username>
+      	<password>12aAA12@</password>
+ 	 </server>    
   </servers>
   <pluginGroups>
         <pluginGroup>org.mule.tools</pluginGroup>
